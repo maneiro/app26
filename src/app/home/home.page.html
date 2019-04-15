@@ -1,12 +1,97 @@
 <ion-header>
   <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
     <ion-title>
-      Ionic Blank
+      Home
     </ion-title>
   </ion-toolbar>
 </ion-header>
+<ion-content>
+    <ion-card class="welcome-card">
+      <ion-img src="/assets/icon1433.svg"></ion-img>
+      <ion-card-header>
+        <ion-card-subtitle>Get Started</ion-card-subtitle>
+        <ion-card-title>iCuentas</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+          <ion-item >
+         <ion-label>Debe: </ion-label>
+         <ion-label>Haber: </ion-label>            
+         <ion-label>Importe:</ion-label>
+      </ion-item >      
+  
+  <ion-item  *ngFor="let item2 of tran | async ">  
+    <ion-label >
+      {{item2.debe}}
+    </ion-label>
+    <ion-label>      
+      {{item2.haber}}
+    </ion-label >
+    <ion-label >      
+      {{item2.importe }} 
+    </ion-label>    
+  </ion-item >
+  </ion-card-content>
+</ion-card>
+<!-- <br> {{ item2.timestamp | date:'dd/MM/yy hh:mm' }} <br> -->
 
-<ion-content padding>
-  The world is your oyster.
-  <p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs/">docs</a> will be your guide.</p>
+ <ion-card class="opciones">  
+    <h4>Now that your app has been created, you'll want to start building out features and components. Check out some of the resources below for next steps.</h4>
+  <p>Alejandro Maneiro</p>
+  <ion-card-content>        
+        <ion-button color="success" (click)="procesar()">Procesar</ion-button>
+        <ion-item *ngFor="let elem of grupo "  [routerLink]="'/add'" >
+          {{elem.cuenta }} {{elem.nombre }}
+        </ion-item>
+        <ion-list>
+          <ion-list-header>
+          <ion-label>Cuentas</ion-label>
+        </ion-list-header>
+          <ion-item *ngFor="let item of items | async">
+            {{item.cuenta}} {{item.nombre }} 
+          </ion-item>
+        </ion-list>
+  </ion-card-content>
+</ion-card>
+    
+    <ion-card >
+    <ion-card-header>
+        <ion-card-title>Firestore data</ion-card-title></ion-card-header>
+    <ion-card-content>
+    <ion-list lines="none">
+          <ion-item *ngFor="let item of itemfire | async " >
+            {{item.cuenta}} {{item.nombre }}  
+      </ion-item>      
+    </ion-list>
+    </ion-card-content>
+    </ion-card>
+
+    <ion-card >
+    <ion-card-header>
+        <ion-card-title> Add new transaction </ion-card-title></ion-card-header>
+    <ion-card-content>
+    
+    <form (ngSubmit)="addTran()">
+      <ion-item>
+        <ion-label position="floating">Debe</ion-label>
+        <ion-input type="text"  [(ngModel)]="tranForm.debe" name="debe"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Haber</ion-label>
+        <ion-input type="text"  [(ngModel)]="tranForm.haber" name="haber"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Importe</ion-label>
+        <ion-input type="number"  [(ngModel)]="tranForm.importe" name="importe"></ion-input>
+      </ion-item>
+      <ion-button  type="submit" full>Add </ion-button>
+    </form>
+
+
+    </ion-card-content>
+    </ion-card>
+
+    
 </ion-content>

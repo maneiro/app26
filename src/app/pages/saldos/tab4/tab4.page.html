@@ -1,0 +1,488 @@
+<ion-header>
+<ion-toolbar>
+  <ion-buttons slot="start">
+    <ion-menu-button></ion-menu-button>
+  </ion-buttons>
+  
+  <ion-buttons slot="secondary">
+    <ion-button>
+      <ion-icon slot="icon-only" name="contact"></ion-icon>
+    </ion-button>
+    <ion-button>
+      <ion-icon slot="icon-only" name="search"></ion-icon>
+    </ion-button>
+  </ion-buttons>
+  <ion-buttons slot="primary">
+    <ion-button color="danger">
+      <ion-icon slot="icon-only" name="more"></ion-icon>
+    </ion-button>
+  </ion-buttons>
+  <ion-title>Settings</ion-title>
+</ion-toolbar>
+</ion-header>
+
+
+<ion-content padding>
+<ion-button (click)="buttons()">Avanzar</ion-button>
+
+<ion-list>
+  <ion-item-sliding>
+    <ion-item>
+      <ion-label>Item</ion-label>
+    </ion-item>
+    <ion-item-options side="start">
+      <ion-item-option >Favorite</ion-item-option>
+      <ion-item-option color="danger" >Share</ion-item-option>
+    </ion-item-options>
+
+    <ion-item-options side="end">
+      <ion-item-option (click)="agregar()">Agregar</ion-item-option>
+    </ion-item-options>
+  </ion-item-sliding>
+
+<ion-item>
+  <ion-label position="floating">Floating</ion-label>
+  <ion-input></ion-input>
+</ion-item>
+
+<ion-item>
+  <ion-label position="stacked">Stacked</ion-label>
+  <ion-input></ion-input>
+</ion-item>
+
+<ion-item>
+  <ion-label>Toggle</ion-label>
+  <ion-toggle slot="end" checked></ion-toggle>
+</ion-item>
+
+<ion-item>
+  <ion-checkbox slot="start" checked></ion-checkbox>
+  <ion-label>Checkbox</ion-label>
+</ion-item>
+
+<!-- Textarea in an item with a placeholder -->
+<ion-item>
+  <ion-textarea placeholder="Enter more information here..."></ion-textarea>
+</ion-item>
+
+<!-- Textarea in an item with a floating label -->
+<ion-item>
+  <ion-label position="floating">Description</ion-label>
+  <ion-textarea></ion-textarea>
+</ion-item>
+
+
+<!-- Textarea that clears the value on edit -->
+<ion-item>
+  <ion-label>Comment</ion-label>
+  <ion-textarea clearOnEdit="true"></ion-textarea>
+</ion-item>
+
+<!-- Textarea with custom number of rows and cols -->
+<ion-item>
+  <ion-label>Notes</ion-label>
+  <ion-textarea rows="6" cols="20" placeholder="Enter any notes here..."></ion-textarea>
+</ion-item>
+
+</ion-list>
+
+
+
+<ion-toolbar>
+  <ion-title>Title Only</ion-title>
+</ion-toolbar>
+
+<ion-toolbar>
+  <ion-buttons slot="start">
+    <ion-back-button></ion-back-button>
+  </ion-buttons>
+  <ion-title>Back Button</ion-title>
+</ion-toolbar>
+
+<ion-toolbar>
+  <ion-buttons slot="secondary">
+    <ion-button>
+      <ion-icon slot="icon-only" name="contact"></ion-icon>
+    </ion-button>
+    <ion-button>
+      <ion-icon slot="icon-only" name="search"></ion-icon>
+    </ion-button>
+  </ion-buttons>
+  <ion-buttons slot="primary">
+    <ion-button color="secondary">
+      <ion-icon slot="icon-only" name="more"></ion-icon>
+    </ion-button>
+  </ion-buttons>
+  <ion-title>Default Buttons</ion-title>
+</ion-toolbar>
+
+<ion-toolbar>
+  <ion-buttons slot="secondary">
+    <ion-button fill="outline">
+      <ion-icon slot="start" name="star"></ion-icon>
+      Star
+    </ion-button>
+  </ion-buttons>
+  <ion-title>Outline Buttons</ion-title>
+  <ion-buttons slot="primary">
+    <ion-button color="danger" fill="outline">
+      Edit
+      <ion-icon slot="end" name="create"></ion-icon>
+    </ion-button>
+  </ion-buttons>
+</ion-toolbar>
+
+<ion-toolbar>
+  <ion-buttons slot="secondary">
+    <ion-button>
+      Account
+    </ion-button>
+  </ion-buttons>
+  <ion-buttons slot="primary">
+    <ion-button color="danger">
+      Edit
+    </ion-button>
+  </ion-buttons>
+  <ion-title>Text Only Buttons</ion-title>
+</ion-toolbar>
+
+<ion-toolbar>
+  <ion-buttons slot="start">
+    <ion-menu-button auto-hide="false"></ion-menu-button>
+  </ion-buttons>
+  <ion-buttons slot="secondary">
+    <ion-button>
+      <ion-icon slot="icon-only" name="star"></ion-icon>
+    </ion-button>
+  </ion-buttons>
+  <ion-title>Left side menu toggle</ion-title>
+</ion-toolbar>
+
+<ion-toolbar>
+  <ion-buttons slot="primary">
+    <ion-button >
+      <ion-icon slot="icon-only" name="star"></ion-icon>
+    </ion-button>
+  </ion-buttons>
+  <ion-title>Right side menu toggle</ion-title>
+  <ion-buttons slot="end">
+    <ion-menu-button auto-hide="false"></ion-menu-button>
+  </ion-buttons>
+</ion-toolbar>
+
+<ion-toolbar>
+  <ion-buttons slot="primary">
+    <ion-button >
+      <ion-icon slot="icon-only" name="search"></ion-icon>
+    </ion-button>
+  </ion-buttons>
+  <ion-searchbar placeholder="Search Favorites"></ion-searchbar>
+</ion-toolbar>
+
+<ion-toolbar>
+  <ion-segment>
+    <ion-segment-button value="all" checked>
+      All
+    </ion-segment-button>
+    <ion-segment-button value="favorites">
+      Favorites
+    </ion-segment-button>
+  </ion-segment>
+</ion-toolbar>
+
+<ion-toolbar color="secondary">
+  <ion-buttons slot="secondary">
+    <ion-button>
+      <ion-icon slot="icon-only" name="contact"></ion-icon>
+    </ion-button>
+    <ion-button>
+      <ion-icon slot="icon-only" name="search"></ion-icon>
+    </ion-button>
+  </ion-buttons>
+  <ion-buttons slot="primary">
+    <ion-button color="primary">
+      <ion-icon slot="icon-only" name="more"></ion-icon>
+    </ion-button>
+  </ion-buttons>
+  <ion-title>Secondary Toolbar</ion-title>
+</ion-toolbar>
+
+<ion-toolbar>
+  <ion-buttons slot="secondary">
+    <ion-button fill="solid">
+      <ion-icon slot="start" name="contact"></ion-icon>
+      Contact
+    </ion-button>
+  </ion-buttons>
+  <ion-title>Solid Buttons</ion-title>
+  <ion-buttons slot="primary">
+    <ion-button fill="solid" color="secondary">
+      Help
+      <ion-icon slot="end" name="help-circle"></ion-icon>
+    </ion-button>
+  </ion-buttons>
+</ion-toolbar>
+
+
+<ion-toolbar>
+  <ion-buttons slot="start">
+    <ion-back-button></ion-back-button>
+  </ion-buttons>
+  <ion-title>Back Button</ion-title>
+</ion-toolbar>
+
+<ion-toolbar>
+  <ion-buttons slot="secondary">
+    <ion-button>
+      <ion-icon slot="icon-only" name="contact"></ion-icon>
+    </ion-button>
+    <ion-button>
+      <ion-icon slot="icon-only" name="search"></ion-icon>
+    </ion-button>
+  </ion-buttons>
+  <ion-buttons slot="primary">
+    <ion-button color="secondary">
+      <ion-icon slot="icon-only" name="more"></ion-icon>
+    </ion-button>
+  </ion-buttons>
+  <ion-title>Default Buttons</ion-title>
+</ion-toolbar>
+
+<ion-toolbar>
+  <ion-buttons slot="secondary">
+    <ion-button fill="solid">
+      <ion-icon slot="start" name="contact"></ion-icon>
+      Contact
+    </ion-button>
+  </ion-buttons>
+  <ion-title>Solid Buttons</ion-title>
+  <ion-buttons slot="primary">
+    <ion-button fill="solid" color="secondary">
+      Help
+      <ion-icon slot="end" name="help-circle"></ion-icon>
+    </ion-button>
+  </ion-buttons>
+</ion-toolbar>
+
+<ion-toolbar>
+  <ion-buttons slot="secondary">
+    <ion-button fill="outline">
+      <ion-icon slot="start" name="star"></ion-icon>
+      Star
+    </ion-button>
+  </ion-buttons>
+  <ion-title>Outline Buttons</ion-title>
+  <ion-buttons slot="primary">
+    <ion-button color="danger" fill="outline">
+      Edit
+      <ion-icon slot="end" name="create"></ion-icon>
+    </ion-button>
+  </ion-buttons>
+</ion-toolbar>
+
+<ion-toolbar>
+  <ion-buttons slot="secondary">
+    <ion-button>
+      Account
+    </ion-button>
+  </ion-buttons>
+  <ion-buttons slot="primary">
+    <ion-button color="danger">
+      Edit
+    </ion-button>
+  </ion-buttons>
+  <ion-title>Text Only Buttons</ion-title>
+</ion-toolbar>
+
+<ion-toolbar>
+  <ion-buttons slot="start">
+    <ion-menu-button autoHide="false"></ion-menu-button>
+
+  </ion-buttons>
+  <ion-buttons slot="secondary">
+    <ion-button>
+      <ion-icon slot="icon-only" name="star"></ion-icon>
+    </ion-button>
+  </ion-buttons>
+  <ion-title>Left side menu toggle</ion-title>
+</ion-toolbar>
+
+<ion-toolbar>
+  <ion-buttons slot="primary">
+    <ion-button >
+      <ion-icon slot="icon-only" name="star"></ion-icon>
+    </ion-button>
+  </ion-buttons>
+  <ion-title>Right side menu toggle</ion-title>
+  <ion-buttons slot="end">
+    <ion-menu-button autoHide="false"></ion-menu-button>
+
+  </ion-buttons>
+</ion-toolbar>
+
+<ion-toolbar>
+  <ion-buttons slot="primary">
+    <ion-button >
+      <ion-icon slot="icon-only" name="search"></ion-icon>
+    </ion-button>
+  </ion-buttons>
+  <ion-searchbar placeholder="Search Favorites"></ion-searchbar>
+</ion-toolbar>
+
+<ion-toolbar>
+  <ion-segment>
+    <ion-segment-button value="all" checked>
+      All
+    </ion-segment-button>
+    <ion-segment-button value="favorites">
+      Favorites
+    </ion-segment-button>
+  </ion-segment>
+</ion-toolbar>
+
+<ion-toolbar color="secondary">
+  <ion-buttons slot="secondary">
+    <ion-button>
+      <ion-icon slot="icon-only" name="contact"></ion-icon>
+    </ion-button>
+    <ion-button>
+      <ion-icon slot="icon-only" name="search"></ion-icon>
+    </ion-button>
+  </ion-buttons>
+  <ion-buttons slot="primary">
+    <ion-button color="primary">
+      <ion-icon slot="icon-only" name="more"></ion-icon>
+    </ion-button>
+  </ion-buttons>
+  <ion-title>Secondary Toolbar</ion-title>
+</ion-toolbar>
+
+<ion-toolbar color="dark">
+  <ion-buttons slot="secondary">
+    <ion-button>
+      <ion-icon slot="icon-only" name="contact"></ion-icon>
+    </ion-button>
+    <ion-button>
+      <ion-icon slot="icon-only" name="search"></ion-icon>
+    </ion-button>
+  </ion-buttons>
+  <ion-buttons slot="primary">
+    <ion-button color="danger">
+      <ion-icon slot="icon-only" name="more"></ion-icon>
+    </ion-button>
+  </ion-buttons>
+  <ion-title>Dark Toolbar</ion-title>
+</ion-toolbar>
+
+<ion-segment >
+  <ion-segment-button value="friends">
+    <ion-label>Friends</ion-label>
+  </ion-segment-button>
+  <ion-segment-button value="enemies">
+    <ion-label>Enemies</ion-label>
+  </ion-segment-button>
+</ion-segment>
+
+<!-- Disabled Segment -->
+<ion-segment  disabled>
+  <ion-segment-button value="sunny" checked>
+    <ion-label>Sunny</ion-label>
+  </ion-segment-button>
+  <ion-segment-button value="rainy">
+    <ion-label>Rainy</ion-label>
+  </ion-segment-button>
+</ion-segment>
+
+<!-- Segment with anchors -->
+<ion-segment >
+  <ion-segment-button href="#dogs" value="dogs">
+    <ion-label>Dogs</ion-label>
+  </ion-segment-button>
+  <ion-segment-button href="#cats" value="cats">
+    <ion-label>Cats</ion-label>
+  </ion-segment-button>
+</ion-segment>
+
+<!-- Scrollable Segment -->
+<ion-segment scrollable>
+  <ion-segment-button>
+    <ion-icon name="home"></ion-icon>
+  </ion-segment-button>
+  <ion-segment-button checked>
+    <ion-icon name="heart"></ion-icon>
+  </ion-segment-button>
+  <ion-segment-button>
+    <ion-icon name="pin"></ion-icon>
+  </ion-segment-button>
+  <ion-segment-button>
+    <ion-icon name="star"></ion-icon>
+  </ion-segment-button>
+  <ion-segment-button>
+    <ion-icon name="call"></ion-icon>
+  </ion-segment-button>
+  <ion-segment-button>
+    <ion-icon name="globe"></ion-icon>
+  </ion-segment-button>
+  <ion-segment-button>
+    <ion-icon name="basket"></ion-icon>
+  </ion-segment-button>
+</ion-segment>
+
+<!-- Segment with secondary color -->
+<ion-segment  color="secondary">
+  <ion-segment-button value="standard">
+    <ion-label>Standard</ion-label>
+  </ion-segment-button>
+  <ion-segment-button value="hybrid">
+    <ion-label>Hybrid</ion-label>
+  </ion-segment-button>
+  <ion-segment-button value="sat">
+    <ion-label>Satellite</ion-label>
+  </ion-segment-button>
+</ion-segment>
+
+<!-- Segment in a toolbar -->
+<ion-toolbar>
+  <ion-segment >
+    <ion-segment-button value="camera">
+      <ion-icon name="camera"></ion-icon>
+    </ion-segment-button>
+    <ion-segment-button value="bookmark">
+      <ion-icon name="bookmark"></ion-icon>
+    </ion-segment-button>
+  </ion-segment>
+</ion-toolbar>
+
+<!-- Segment with default selection -->
+<ion-segment  value="javascript">
+  <ion-segment-button value="python">
+    <ion-label>Python</ion-label>
+  </ion-segment-button>
+  <ion-segment-button value="javascript">
+    <ion-label>Javascript</ion-label>
+  </ion-segment-button>
+</ion-segment>
+
+<ion-avatar>
+  <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
+</ion-avatar>
+
+<ion-chip>
+  <ion-avatar>
+    <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
+  </ion-avatar>
+  <ion-label>Chip Avatar</ion-label>
+</ion-chip>
+
+<ion-item>
+  <ion-avatar slot="start">
+    <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
+  </ion-avatar>
+  <ion-label>Item Avatar</ion-label>
+</ion-item>
+
+
+
+
+</ion-content>
+

@@ -1,1 +1,18 @@
+.welcome-card ion-img {
+  height: 200px;
+  width:300px;
+  /*overflow: hidden;*/
+   --ion-background-color:#0F202A;
+}
 
+ion-content{
+   --ion-background-color:#359fde;
+    --ion-text-color:black;
+   /*--ion-text-color:#E3B813; */
+
+}
+.opciones  {
+	 --background:burlywood;
+	 --color:black;
+	 padding:10px;
+}

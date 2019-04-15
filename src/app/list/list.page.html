@@ -1,0 +1,81 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      List
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-toolbar>
+   <ion-searchbar></ion-searchbar>
+  </ion-toolbar>
+  <h3 margin-start>Login</h3>
+  <p margin>Click the login button to use the credentials below. Then, toggle the menu to see the menu items change.</p>
+
+  <ion-list no-margin>
+    <ion-item>
+      <ion-label stacked color="primary">Name</ion-label>
+      <ion-input [(ngModel)]="user.name" ></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label stacked color="primary">Username</ion-label>
+      <ion-input [(ngModel)]="user.username" ></ion-input>
+    </ion-item>
+  </ion-list>
+
+  <div padding>
+    <ion-button block (click)="login()">Login</ion-button>
+    <ion-button block color="secondary" menuToggle>Toggle Menu</ion-button>
+  </div>
+  <ion-list>
+    <ion-item *ngFor="let item of items">
+      <ion-icon [name]="item.icon" slot="start"></ion-icon>
+      {{item.title}}
+      <div class="item-note" slot="end">
+        {{item.note}}
+      </div>
+    </ion-item>
+  </ion-list>
+  <ion-item-group>
+      <ion-item-divider color="light">A</ion-item-divider>
+      <ion-item>Angola</ion-item>
+      <ion-item (click)="presentToastWithOptions()">Argentina</ion-item>
+      <ion-item>Armenia</ion-item>
+      <ion-item>Australia</ion-item>
+      <ion-item>Austria</ion-item>
+    </ion-item-group>
+
+    <ion-item-group>
+      <ion-item-divider color="secondary">B</ion-item-divider>
+      <ion-item>Bangladesh</ion-item>
+      <ion-item>Belarus</ion-item>
+      <ion-item>Belgium</ion-item>
+      <ion-item>Bhutan</ion-item>
+      <ion-item>Bolivia</ion-item>
+      <ion-item>Brazil</ion-item>
+    </ion-item-group>
+
+    <ion-item-group>
+      <ion-item-divider color="tertiary">C</ion-item-divider>
+      <ion-item>Cambodia</ion-item>
+      <ion-item>Cameroon</ion-item>
+      <ion-item>Canada</ion-item>
+      <ion-item>Chile</ion-item>
+      <ion-item>China</ion-item>
+      <ion-item>Colombia</ion-item>
+      <ion-item>Costa Rica</ion-item>
+      <ion-item>Cuba</ion-item>
+      <ion-item>Cyprus</ion-item>
+      <ion-item>Czech Republic</ion-item>
+    </ion-item-group>
+
+  <!--
+    <div *ngIf="selectedItem" padding>
+      You navigated here from <b>{{selectedItem.title }}</b>
+    </div>
+  -->
+</ion-content>

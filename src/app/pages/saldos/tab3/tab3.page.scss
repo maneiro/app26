@@ -1,0 +1,27 @@
+
+
+ion-toolbar{
+    --background:#FF5722;    
+}
+
+ion-content{
+    --ion-background-color:#5cc2c4;
+}
+
+ ion-col > div {
+      background-color: orange;
+      border: solid 2px white;
+      padding: 10px;
+    }
+ion-grid {
+	height:100%;
+}    
+.rowfinal {
+	height:30%;
+	background:#7CBFC0;
+	ion-col > div{
+		background-color:#95C590;
+		height:100%;
+	}
+}
+

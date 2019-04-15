@@ -1,0 +1,55 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>add</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+<ion-img src="/assets/shapes2.jpg"></ion-img>
+<ion-chip>
+  <ion-label>Default</ion-label>
+</ion-chip>
+
+<ion-chip>
+  <ion-label color="secondary">Secondary Label</ion-label>
+</ion-chip>
+
+<ion-chip color="secondary" (click)="go('/list')">
+  <ion-label color="dark">voy hacia list con href</ion-label>
+</ion-chip>
+
+<ion-chip>
+  <ion-icon name="pin"></ion-icon>
+  <ion-label>Default</ion-label>
+</ion-chip>
+
+
+<ion-chip>
+  <ion-icon name="heart" color="dark"></ion-icon>
+  <ion-label>Default</ion-label>
+</ion-chip>
+
+<ion-card>
+<ion-card-content>
+<ion-chip (click)="morefunc()">
+  <ion-label>Action Sheet</ion-label>
+  <ion-icon name="close-circle"></ion-icon>
+</ion-chip>
+
+<ion-chip (click)="go('/acreedores')">
+  <ion-icon name="pin" color="primary"></ion-icon>
+  <ion-label>Acreedores</ion-label>
+  <ion-icon name="close"></ion-icon>
+</ion-chip>
+
+<ion-chip (click)="back()" [routerLink]="" routerDirection="root">
+  <ion-avatar>
+    <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
+  </ion-avatar>
+  <ion-label>regreso a home</ion-label>
+  <ion-icon name="close-circle"></ion-icon>    
+</ion-chip>
+</ion-card-content>
+</ion-card>
+</ion-content>

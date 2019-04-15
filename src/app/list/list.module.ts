@@ -3,10 +3,8 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 import { RouterModule } from '@angular/router';
-import { TestdirectiveDirective } from '../Testdirective.directive';
 
-import { HomePage } from './home.page';
-
+import { ListPage } from './list.page';
 
 @NgModule({
   imports: [
@@ -16,10 +14,10 @@ import { HomePage } from './home.page';
     RouterModule.forChild([
       {
         path: '',
-        component: HomePage
+        component: ListPage
       }
     ])
   ],
-  declarations: [HomePage,TestdirectiveDirective]
+  declarations: [ListPage]
 })
-export class HomePageModule {}
+export class ListPageModule {}
