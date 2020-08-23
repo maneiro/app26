@@ -42,9 +42,7 @@ export class ListPage implements OnInit {
 async presentToastWithOptions() {
     const toast = await this.toastCtr.create({
       message: 'Buenos Aires !!',
-      showCloseButton: true,
-      position: 'top',
-      closeButtonText: 'Done',
+      position: 'top',  
       translucent: true,
       cssClass: "changeToast"
     });

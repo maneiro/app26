@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import {CuentasService} from '../services/cuentas.service';
-import { Events } from '@ionic/angular';
+// import { Events } from '@ionic/angular';
 import { Observable } from 'rxjs';
 import * as firebase from 'firebase/app';
 
@@ -31,7 +31,7 @@ export class HomePage {
  cities:any[];
 
 
-constructor (  public ctaservice:CuentasService, public events: Events){
+constructor (  public ctaservice:CuentasService){
 
     this.items = ctaservice.getItems();
      
@@ -65,7 +65,7 @@ procesar (){
   let sfDocRef :any;
   this.grupo= [...this.grupo, ...(this.ctaservice.leer ())];
   
-  this.events.publish('testevent', {key: 'actualizar'});
+  // this.events.publish('testevent', {key: 'actualizar'});
  
 
 }

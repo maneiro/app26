@@ -1,7 +1,5 @@
 {
   "name": "app26",
-  "integrations": {
-    "cordova": {}
-  },
+  "integrations": {  },
   "type": "angular"
 }

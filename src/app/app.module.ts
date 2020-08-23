@@ -14,6 +14,8 @@ import { FIREBASE_CREDENTIALS } from './firebase.credentials';
 import { AppPipesModule } from './pipes/pipes.module';
 import { CuentasService } from './services/cuentas.service';
 import { AcreedoresPageModule } from './pages/acreedores/acreedores.module';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 
 @NgModule({
@@ -27,7 +29,8 @@ import { AcreedoresPageModule } from './pages/acreedores/acreedores.module';
     AngularFireDatabaseModule,
     AngularFirestoreModule,
     AppPipesModule,
-    AcreedoresPageModule
+    AcreedoresPageModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [
     StatusBar,
